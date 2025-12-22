@@ -1,58 +1,58 @@
-import { Mail, Linkedin, Github } from "lucide-react";
+import { useState, useEffect } from "react";
+import { Mail, Linkedin, ArrowUpRight } from "lucide-react";
 
 export const Header = () => {
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => setScrolled(window.scrollY > 50);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 px-6 lg:px-12 py-6">
-      <div className="flex items-center justify-between">
-        {/* Logo / Name */}
-        <div className="flex items-center gap-3">
-          <div className="w-10 h-10 rounded-full bg-coral flex items-center justify-center">
-            <span className="text-primary-foreground font-display font-bold text-lg">S</span>
-          </div>
-          <span className="font-display font-semibold text-lg hidden sm:block text-foreground mix-blend-difference">
-            Suraj Rajkumar
+    <header 
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+        scrolled ? "py-4 bg-background/80 backdrop-blur-lg border-b border-border/50" : "py-6"
+      }`}
+    >
+      <div className="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between">
+        <a href="#hero" className="group flex items-center gap-3">
+          <span className="w-2 h-2 rounded-full bg-coral group-hover:scale-150 transition-transform" />
+          <span className="font-sans font-semibold text-sm tracking-wide">
+            SR
           </span>
-        </div>
+        </a>
         
-        {/* Navigation */}
-        <nav className="hidden md:flex items-center gap-8">
-          <a href="#about" className="text-sm font-sans font-medium text-foreground/70 hover:text-coral transition-colors mix-blend-difference">
-            About
-          </a>
-          <a href="#work" className="text-sm font-sans font-medium text-foreground/70 hover:text-coral transition-colors mix-blend-difference">
-            Work
-          </a>
-          <a href="#contact" className="text-sm font-sans font-medium text-foreground/70 hover:text-coral transition-colors mix-blend-difference">
-            Contact
-          </a>
+        <nav className="hidden md:flex items-center gap-10">
+          {["Work", "Experience", "About", "Contact"].map((item) => (
+            <a 
+              key={item}
+              href={`#${item.toLowerCase()}`}
+              className="relative text-sm font-sans text-muted-foreground hover:text-foreground transition-colors group"
+            >
+              {item}
+              <span className="absolute -bottom-1 left-0 w-0 h-px bg-coral group-hover:w-full transition-all duration-300" />
+            </a>
+          ))}
         </nav>
         
-        {/* Social Links */}
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-3">
           <a 
             href="mailto:surajrajkumar2212@gmail.com" 
-            className="w-9 h-9 rounded-full bg-background/20 backdrop-blur-sm flex items-center justify-center hover:bg-coral hover:text-primary-foreground transition-all"
-            aria-label="Email"
+            className="group flex items-center gap-2 px-4 py-2 rounded-full border border-border hover:border-coral hover:bg-coral hover:text-primary-foreground transition-all duration-300 text-sm font-sans"
           >
             <Mail className="w-4 h-4" />
+            <span className="hidden sm:inline">Contact</span>
+            <ArrowUpRight className="w-3 h-3 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all" />
           </a>
           <a 
             href="https://www.linkedin.com/in/suraj-rajkumar-5337b8299" 
             target="_blank"
             rel="noopener noreferrer"
-            className="w-9 h-9 rounded-full bg-background/20 backdrop-blur-sm flex items-center justify-center hover:bg-coral hover:text-primary-foreground transition-all"
-            aria-label="LinkedIn"
+            className="w-10 h-10 rounded-full border border-border flex items-center justify-center hover:border-coral hover:text-coral transition-colors"
           >
             <Linkedin className="w-4 h-4" />
-          </a>
-          <a 
-            href="https://github.com" 
-            target="_blank"
-            rel="noopener noreferrer"
-            className="w-9 h-9 rounded-full bg-background/20 backdrop-blur-sm flex items-center justify-center hover:bg-coral hover:text-primary-foreground transition-all"
-            aria-label="GitHub"
-          >
-            <Github className="w-4 h-4" />
           </a>
         </div>
       </div>
