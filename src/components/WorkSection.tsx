@@ -267,7 +267,7 @@ export const WorkSection = () => {
 
       {/* Category Dialog */}
       <Dialog open={!!selectedCategory && !selectedProject} onOpenChange={(open) => !open && handleClose()}>
-        <DialogContent className="max-w-2xl p-0 gap-0 bg-background border-border overflow-hidden fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
+        <DialogContent className="max-w-2xl w-[calc(100vw-2rem)] sm:w-full max-h-[85vh] p-0 gap-0 bg-background border-border overflow-hidden">
           <DialogHeader className="p-6 pb-4 border-b border-border">
             <div className="flex items-center gap-4">
               {selectedCategory && (
@@ -317,7 +317,7 @@ export const WorkSection = () => {
 
       {/* Project Detail Dialog */}
       <Dialog open={!!selectedProject} onOpenChange={(open) => !open && handleBack()}>
-        <DialogContent className="max-w-2xl p-0 gap-0 bg-background border-border overflow-hidden fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
+        <DialogContent className="max-w-2xl w-[calc(100vw-2rem)] sm:w-full max-h-[85vh] p-0 gap-0 bg-background border-border overflow-hidden">
           <DialogHeader className="p-6 pb-4 border-b border-border">
             <button
               onClick={handleBack}
