@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import profilePhoto from "@/assets/profile-photo.jpg";
 
 export const AboutSection = () => {
   const sectionRef = useRef<HTMLElement>(null);
@@ -45,6 +46,22 @@ export const AboutSection = () => {
           </div>
 
           <div className={`space-y-10 transition-all duration-1000 delay-200 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
+            {/* Profile Photo */}
+            <div className="relative">
+              <div className="relative aspect-[3/4] max-w-sm mx-auto lg:mx-0 overflow-hidden rounded-2xl">
+                <img 
+                  src={profilePhoto} 
+                  alt="Suraj Rajkumar - iOS Developer and Visual Storyteller"
+                  className="w-full h-full object-cover object-top"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-background/40 via-transparent to-transparent" />
+              </div>
+              {/* Decorative elements */}
+              <div className="absolute -top-4 -right-4 w-24 h-24 border border-coral/30 rounded-2xl -z-10" />
+              <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-coral/10 rounded-2xl -z-10" />
+            </div>
+
+            {/* Skills */}
             {skills.map((group) => (
               <div key={group.category}>
                 <h3 className="font-mono text-xs tracking-[0.2em] text-muted-foreground uppercase mb-4">
