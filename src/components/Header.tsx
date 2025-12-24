@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Mail, Linkedin, ArrowUpRight } from "lucide-react";
+import { ThemeToggle } from "./ThemeToggle";
 
 export const Header = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -38,6 +39,7 @@ export const Header = () => {
         </nav>
         
         <div className="flex items-center gap-3">
+          <ThemeToggle />
           <a 
             href="mailto:surajrajkumar2212@gmail.com" 
             className="group flex items-center gap-2 px-4 py-2 rounded-full border border-border hover:border-coral hover:bg-coral hover:text-primary-foreground transition-all duration-300 text-sm font-sans"
