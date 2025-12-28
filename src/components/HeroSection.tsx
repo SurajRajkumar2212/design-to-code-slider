@@ -1,5 +1,6 @@
 import { useState, useRef, useCallback, useEffect } from "react";
 import { ArrowDown, GripVertical } from "lucide-react";
+import { CuriousReveal } from "./CuriousReveal";
 
 export const HeroSection = () => {
   const [sliderPosition, setSliderPosition] = useState(50);
@@ -108,6 +109,11 @@ export const HeroSection = () => {
           </div>
         </div>
         <div className="absolute top-0 bottom-0 left-1/2 -translate-x-1/2 w-px bg-gradient-to-b from-transparent via-foreground/20 to-transparent pointer-events-none" style={{ height: "100vh", top: "-50vh" }} />
+      </div>
+
+      {/* Curious Button - Center */}
+      <div className="absolute bottom-24 left-1/2 -translate-x-1/2 z-40">
+        <CuriousReveal />
       </div>
 
       {/* Scroll indicator */}
