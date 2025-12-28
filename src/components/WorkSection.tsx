@@ -51,6 +51,14 @@ const categories: Category[] = [
         insights: ["Reduced decision fatigue UX", "Lifestyle content integration", "Seamless fashion-wellness ecosystem"],
         year: "2025",
       },
+      {
+        id: "ios-3",
+        title: "Offline-First Mindful Journal",
+        description: "Privacy-focused journaling app with complete offline functionality and local encryption. Designed for introspection rather than engagement, featuring minimal UI, no cloud sync, and intentional friction to slow user interaction. Prioritized data ownership, emotional safety, and accessibility.",
+        tech: ["SwiftUI", "Core Data", "Local Encryption", "Privacy-by-Design"],
+        insights: ["Apple-grade design thinking", "Ethical product values", "Human-centered UX"],
+        year: "2025",
+      },
     ],
   },
   {
@@ -69,6 +77,14 @@ const categories: Category[] = [
         insights: ["Low-latency gesture detection", "Modular ROS architecture", "Reliable motion control (forward, stop, turn)"],
         year: "2025",
       },
+      {
+        id: "ros-2",
+        title: "Autonomous Mobile Robot Navigation",
+        description: "Implemented an autonomous navigation system using ROS with SLAM-based mapping, obstacle avoidance, and sensor fusion in a simulated environment. Designed motion and sensor models, analyzed localization drift, and evaluated failure cases to improve reliability.",
+        tech: ["ROS", "Gazebo", "LiDAR", "SLAM", "Probabilistic Modeling"],
+        insights: ["Strong systems thinking", "Engineering rigor", "Real-world constraint testing"],
+        year: "2025",
+      },
     ],
   },
   {
@@ -81,6 +97,14 @@ const categories: Category[] = [
     projects: [
       {
         id: "ux-1",
+        title: "Silence-Aware Interface Design",
+        description: "Designed a distraction-minimizing mobile interface that intentionally reduces user engagement through muted visuals, time-based UI fading, and notification suppression. Conducted user research to identify cognitive overload patterns and translated findings into an ethical, calm-first design system.",
+        tech: ["UX Research", "Accessibility", "Interaction Design", "Figma"],
+        insights: ["Ethical UX thinking", "User-first philosophy", "Cognitive load reduction"],
+        year: "2025",
+      },
+      {
+        id: "ux-2",
         title: "Does Nothing – Brand Experience",
         description: "Philosophy-driven fashion and lifestyle brand celebrating the luxury of stillness. Designed digital spaces that reduce mental clutter, inspire slow living, and help people reconnect with themselves through intentional design.",
         tech: ["Figma", "UI/UX Design", "HCI", "Swift"],
@@ -88,7 +112,7 @@ const categories: Category[] = [
         year: "2025",
       },
       {
-        id: "ux-2",
+        id: "ux-3",
         title: "PocketChai – UX Design",
         description: "Designed the complete user experience for a virtual chai café app with focus on mindful digital conversations. Created warm, serene interactions inspired by real Indian cafés.",
         tech: ["Figma", "UI/UX Design", "iOS Design", "User Research"],
@@ -107,6 +131,14 @@ const categories: Category[] = [
     projects: [
       {
         id: "web-1",
+        title: "Split-Screen Interactive Portfolio",
+        description: "High-performance split-screen portfolio website where visual output and underlying code architecture scroll synchronously. Implemented scroll-linked storytelling to reveal design decisions alongside engineering trade-offs in real time. Optimized for low latency and high Lighthouse scores.",
+        tech: ["React", "Next.js", "GSAP", "Intersection Observer"],
+        insights: ["Designer who codes identity", "Performance optimization", "Interaction design"],
+        year: "2025",
+      },
+      {
+        id: "web-2",
         title: "RagaTherapy.ai",
         description: "Wellness platform delivering AI-personalized Indian raga therapy based on user mood, circadian rhythm, and therapeutic goals. Smart matching engine for ragas like Bhairav, Yaman, and Darbari aligned with time-of-day healing practices.",
         tech: ["React", "TypeScript", "Tailwind CSS", "Shadcn/ui", "React Router"],
@@ -114,7 +146,7 @@ const categories: Category[] = [
         year: "2025",
       },
       {
-        id: "web-2",
+        id: "web-3",
         title: "Raw Audio Streamer",
         description: "Audio streaming simulation application replicating real-time streaming over socket-based architecture. Mirrors the workflow and UX of platforms like Spotify with buffering visualization and state-managed controls.",
         tech: ["React", "TypeScript", "Tailwind CSS", "HTML5 Audio API"],
@@ -122,7 +154,7 @@ const categories: Category[] = [
         year: "2025",
       },
       {
-        id: "web-3",
+        id: "web-4",
         title: "Portfolio Website",
         description: "This very website - a minimal, sophisticated portfolio showcasing the intersection of design and development skills with custom cursor, theme toggle, and smooth animations.",
         tech: ["React", "TypeScript", "Tailwind CSS", "Shadcn/ui"],
@@ -151,14 +183,22 @@ const categories: Category[] = [
   },
   {
     id: 6,
-    title: "Event Photography",
-    category: "Photography",
-    description: "Professional event and portrait photography for university initiatives and campaigns.",
+    title: "Photography",
+    category: "Visual Arts",
+    description: "Conceptual photography and visual storytelling with emotional depth and narrative sensitivity.",
     icon: Camera,
     tags: ["Lightroom", "Photoshop", "Creative Direction"],
     projects: [
       {
         id: "photo-1",
+        title: "Memory vs Reality",
+        description: "Conceptual photo essay exploring the contrast between public identity and private emotion. Each subject was portrayed through paired images representing perceived reality and hidden truth. Focused on minimal composition, controlled lighting, and narrative sequencing to evoke emotional depth without overt symbolism.",
+        tech: ["Fine Art Photography", "Visual Storytelling", "Controlled Lighting", "Post-Processing"],
+        insights: ["Demonstrates taste and restraint", "Narrative sensitivity", "Rare creative signal"],
+        year: "2025",
+      },
+      {
+        id: "photo-2",
         title: "PESU Annual Fest 2024",
         description: "Complete event coverage including performances, candid moments, and backstage content. Delivered 500+ edited photographs within 48 hours.",
         tech: ["Sony A7III", "Lightroom Classic", "Photoshop", "Capture One"],
@@ -166,7 +206,7 @@ const categories: Category[] = [
         year: "2024",
       },
       {
-        id: "photo-2",
+        id: "photo-3",
         title: "Corporate Headshots - PIXELS",
         description: "Professional portrait series for team members and executives. Consistent lighting and backdrop for brand cohesion.",
         tech: ["Studio Lighting", "Lightroom", "Color Grading"],
