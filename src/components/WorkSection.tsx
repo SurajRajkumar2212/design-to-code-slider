@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { ArrowUpRight, Code2, Camera, Film, Layout, X, ChevronRight } from "lucide-react";
+import { ArrowUpRight, Code2, Camera, Film, Layout, X, ChevronRight, Bot, Palette } from "lucide-react";
 import {
   Dialog,
   DialogContent,
@@ -131,8 +131,76 @@ const categories: Category[] = [
   },
   {
     id: 4,
-    title: "Web Design",
+    title: "Autonomous Systems",
+    category: "Robotics",
+    description: "ROS-based autonomous systems for navigation, perception, and real-time decision making.",
+    icon: Bot,
+    tags: ["ROS", "Python", "C++", "Gazebo"],
+    projects: [
+      {
+        id: "ros-1",
+        title: "Autonomous Mobile Robot",
+        description: "Built a differential drive robot with SLAM-based navigation using ROS2. Integrated LiDAR, IMU, and wheel encoders for robust localization.",
+        tech: ["ROS2", "Nav2", "SLAM Toolbox", "Python", "C++"],
+        insights: ["Real-time obstacle avoidance", "95% navigation accuracy", "Custom behavior trees"],
+        year: "2024",
+      },
+      {
+        id: "ros-2",
+        title: "Object Detection & Manipulation",
+        description: "Vision-based pick-and-place system using depth cameras and MoveIt for motion planning. Trained custom YOLO model for object recognition.",
+        tech: ["ROS", "MoveIt", "OpenCV", "PyTorch", "Gazebo"],
+        insights: ["Sub-centimeter precision", "Multi-object handling", "Simulation-first approach"],
+        year: "2024",
+      },
+      {
+        id: "ros-3",
+        title: "Swarm Robotics Simulation",
+        description: "Simulated multi-robot coordination for collaborative mapping. Implemented distributed consensus algorithms for task allocation.",
+        tech: ["ROS", "Gazebo", "Python", "Graph Algorithms"],
+        insights: ["5+ robot coordination", "Decentralized control", "Research publication"],
+        year: "2023",
+      },
+    ],
+  },
+  {
+    id: 5,
+    title: "UI/UX & HCI Design",
     category: "Design",
+    description: "Human-centered design focusing on usability, accessibility, and delightful user experiences.",
+    icon: Palette,
+    tags: ["Figma", "User Research", "Prototyping", "A/B Testing"],
+    projects: [
+      {
+        id: "ux-1",
+        title: "Healthcare App Redesign",
+        description: "Complete UX overhaul for a patient portal. Conducted user research, created personas, and implemented accessibility-first design patterns.",
+        tech: ["Figma", "Maze", "User Interviews", "WCAG 2.1"],
+        insights: ["40% task completion improvement", "508 compliance", "Reduced support tickets by 60%"],
+        year: "2024",
+      },
+      {
+        id: "ux-2",
+        title: "Voice UI Research Project",
+        description: "HCI research on conversational interfaces for elderly users. Published findings on voice interaction patterns and cognitive load reduction.",
+        tech: ["Wizard of Oz Testing", "Think-Aloud Protocol", "Statistical Analysis"],
+        insights: ["Academic publication", "Informed product decisions", "Novel interaction patterns"],
+        year: "2024",
+      },
+      {
+        id: "ux-3",
+        title: "Design System Creation",
+        description: "Built a comprehensive design system from scratch with tokens, components, and documentation for a fintech startup.",
+        tech: ["Figma", "Storybook", "Design Tokens", "Documentation"],
+        insights: ["100+ components", "Used by 5 product teams", "50% faster design-to-dev"],
+        year: "2023",
+      },
+    ],
+  },
+  {
+    id: 6,
+    title: "Web Design",
+    category: "Development",
     description: "Modern, responsive websites with attention to user experience and visual aesthetics.",
     icon: Layout,
     tags: ["React", "Figma", "CSS"],
