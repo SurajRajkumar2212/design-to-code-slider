@@ -6,6 +6,17 @@ import {
   DialogHeader,
   DialogTitle,
 } from "@/components/ui/dialog";
+import { ProcessArtifact } from "@/components/ProcessArtifact";
+
+interface TradeOff {
+  title: string;
+  description: string;
+}
+
+interface Artifact {
+  label: string;
+  note: string;
+}
 
 interface Project {
   id: string;
@@ -14,6 +25,8 @@ interface Project {
   tech: string[];
   insights: string[];
   year: string;
+  tradeOff?: TradeOff;
+  artifacts?: Artifact[];
 }
 
 interface Category {
@@ -42,6 +55,10 @@ const categories: Category[] = [
         tech: ["Swift", "SwiftUI", "iOS", "UI/UX Design"],
         insights: ["UI inspired by real Indian cafés", "Warm tones with light/dark modes", "Mindful digital experience"],
         year: "2025",
+        artifacts: [
+          { label: "Early mood board", note: "Initial visual direction exploring warmth and stillness." },
+          { label: "Wireframe sketch", note: "Lo-fi layout for the ambient table selection." },
+        ],
       },
       {
         id: "ios-2",
@@ -50,6 +67,13 @@ const categories: Category[] = [
         tech: ["Swift", "SwiftUI", "Figma", "HCI Principles"],
         insights: ["Reduced decision fatigue UX", "Lifestyle content integration", "Seamless fashion-wellness ecosystem"],
         year: "2025",
+        tradeOff: {
+          title: "Constraint",
+          description: "Early testing showed animations increased engagement but reduced task completion speed. I removed all non-essential motion despite initial appeal.",
+        },
+        artifacts: [
+          { label: "Typography study", note: "Explored 12 typefaces before settling on geometric sans." },
+        ],
       },
       {
         id: "ios-3",
@@ -58,6 +82,10 @@ const categories: Category[] = [
         tech: ["SwiftUI", "Core Data", "Local Encryption", "Privacy-by-Design"],
         insights: ["Apple-grade design thinking", "Ethical product values", "Human-centered UX"],
         year: "2025",
+        tradeOff: {
+          title: "Trade-off",
+          description: "Intentional friction reduced daily active users but increased meaningful entries per session by 3x. Chose depth over engagement metrics.",
+        },
       },
     ],
   },
@@ -441,6 +469,32 @@ export const WorkSection = () => {
                 ))}
               </div>
             </div>
+
+            {/* Process Artifacts */}
+            {selectedProject?.artifacts && selectedProject.artifacts.length > 0 && (
+              <div>
+                <h5 className="font-mono text-xs tracking-[0.2em] text-muted-foreground/60 uppercase mb-3">
+                  Process
+                </h5>
+                <div className="flex gap-3">
+                  {selectedProject.artifacts.map((artifact, idx) => (
+                    <ProcessArtifact key={idx} label={artifact.label} note={artifact.note} />
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {/* Trade-off Section */}
+            {selectedProject?.tradeOff && (
+              <div className="border-l-2 border-muted pl-4 py-2">
+                <p className="font-mono text-xs tracking-[0.2em] text-muted-foreground/60 uppercase mb-2">
+                  {selectedProject.tradeOff.title}
+                </p>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  {selectedProject.tradeOff.description}
+                </p>
+              </div>
+            )}
 
             {/* Insights */}
             <div>

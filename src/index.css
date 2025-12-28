@@ -192,3 +192,17 @@ html {
 ::-webkit-scrollbar-thumb:hover {
   @apply bg-coral/60;
 }
+
+/* Principles section special styling */
+.principles-text {
+  @apply font-display leading-relaxed tracking-wide;
+}
+
+/* Process artifact styling */
+.artifact-thumbnail {
+  @apply opacity-40 grayscale transition-all duration-500 cursor-pointer;
+}
+
+.artifact-thumbnail:hover {
+  @apply opacity-100 grayscale-0;
+}
