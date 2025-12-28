@@ -212,6 +212,96 @@ const skillDetails: Record<string, SkillDetail> = {
       { challenge: "Tight deadline project delivery", solution: "Mastered proxy workflows and keyboard shortcuts for 2x faster editing" },
     ],
   },
+  ROS: {
+    name: "ROS",
+    category: "Robotics",
+    description: "Robot Operating System - the flexible framework for writing robot software.",
+    learned: [
+      "ROS2 architecture and DDS middleware",
+      "Nav2 for autonomous navigation",
+      "TF2 transforms and sensor fusion",
+      "Custom message types and services",
+    ],
+    realWorld: [
+      { challenge: "Real-time obstacle avoidance on limited hardware", solution: "Optimized costmap layers and implemented dynamic reconfigure for adaptive navigation" },
+      { challenge: "Multi-sensor data synchronization", solution: "Built a custom sensor fusion node using message filters and approximate time synchronizers" },
+    ],
+  },
+  "Computer Vision": {
+    name: "Computer Vision",
+    category: "Robotics",
+    description: "Enabling robots to perceive and understand the visual world.",
+    learned: [
+      "OpenCV for image processing",
+      "Depth estimation and point clouds",
+      "Object detection with YOLO and SSD",
+      "Visual SLAM fundamentals",
+    ],
+    realWorld: [
+      { challenge: "Detecting objects in varying lighting conditions", solution: "Implemented adaptive thresholding and trained domain-specific detection models" },
+      { challenge: "Real-time processing on edge devices", solution: "Quantized models and used TensorRT for 10x inference speedup on Jetson" },
+    ],
+  },
+  Gazebo: {
+    name: "Gazebo",
+    category: "Robotics",
+    description: "3D robotics simulator for testing algorithms in realistic virtual environments.",
+    learned: [
+      "URDF/SDF robot modeling",
+      "Custom sensor plugins",
+      "Physics tuning for realism",
+      "ROS integration and testing",
+    ],
+    realWorld: [
+      { challenge: "Sim-to-real transfer gap", solution: "Added sensor noise models and domain randomization for robust policy learning" },
+      { challenge: "Testing dangerous edge cases safely", solution: "Created comprehensive simulation test suites before real-world deployment" },
+    ],
+  },
+  "UI/UX Design": {
+    name: "UI/UX Design",
+    category: "Design",
+    description: "Creating intuitive and delightful digital experiences through user-centered design.",
+    learned: [
+      "Design thinking methodology",
+      "User research and usability testing",
+      "Information architecture",
+      "Interaction design patterns",
+    ],
+    realWorld: [
+      { challenge: "Redesigning a complex enterprise dashboard", solution: "Conducted card sorting and tree testing to optimize IA, reducing user errors by 45%" },
+      { challenge: "Improving mobile conversion rates", solution: "A/B tested checkout flows and implemented progressive disclosure, boosting conversions 30%" },
+    ],
+  },
+  "HCI Research": {
+    name: "HCI Research",
+    category: "Design",
+    description: "Studying how humans interact with computers to inform better design decisions.",
+    learned: [
+      "Experimental design and hypothesis testing",
+      "Qualitative and quantitative methods",
+      "Cognitive psychology principles",
+      "Accessibility and inclusive design",
+    ],
+    realWorld: [
+      { challenge: "Evaluating VUI effectiveness for elderly users", solution: "Designed and conducted Wizard of Oz studies, publishing findings in HCI journal" },
+      { challenge: "Measuring cognitive load in complex interfaces", solution: "Used eye-tracking and NASA-TLX to validate design improvements" },
+    ],
+  },
+  Prototyping: {
+    name: "Prototyping",
+    category: "Design",
+    description: "Rapidly creating interactive mockups to test and validate design concepts.",
+    learned: [
+      "Low to high fidelity prototyping",
+      "Interactive animations and micro-interactions",
+      "User flow mapping",
+      "Rapid iteration techniques",
+    ],
+    realWorld: [
+      { challenge: "Getting stakeholder buy-in for new features", solution: "Created high-fidelity prototypes that secured $500K development budget" },
+      { challenge: "Testing complex multi-step workflows", solution: "Built clickable prototypes for user testing, identifying 15 usability issues pre-development" },
+    ],
+  },
 };
 
 export const AboutSection = () => {
@@ -230,7 +320,8 @@ export const AboutSection = () => {
 
   const skills = [
     { category: "Development", items: ["Swift", "UIKit", "SwiftUI", "React", "TypeScript"] },
-    { category: "Design", items: ["Figma", "Photography", "Cinematography", "Motion"] },
+    { category: "Robotics", items: ["ROS", "Computer Vision", "Gazebo"] },
+    { category: "Design", items: ["Figma", "UI/UX Design", "HCI Research", "Prototyping"] },
     { category: "Tools", items: ["Xcode", "Git", "Lightroom", "Premiere Pro"] },
   ];
 
