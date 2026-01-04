@@ -113,7 +113,7 @@ export const HeroSection = () => {
       {/* Name - top left corner */}
       <div className="absolute top-8 left-8 z-40">
         <p className="text-xs font-mono tracking-[0.3em] uppercase text-muted-foreground">Portfolio of</p>
-        <h2 className="text-lg md:text-xl font-display text-foreground mt-1">Your Name</h2>
+        <h2 className="text-lg md:text-xl font-display text-foreground mt-1">Suraj Rajkumar</h2>
       </div>
 
       {/* Scroll indicator */}
