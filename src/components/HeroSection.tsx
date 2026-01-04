@@ -110,16 +110,6 @@ export const HeroSection = () => {
         <div className="absolute top-0 bottom-0 left-1/2 -translate-x-1/2 w-px bg-gradient-to-b from-transparent via-foreground/20 to-transparent pointer-events-none" style={{ height: "100vh", top: "-50vh" }} />
       </div>
 
-      {/* Name - centered below header */}
-      <div className="absolute top-24 md:top-28 left-1/2 -translate-x-1/2 z-40 text-center">
-        <h2 className="text-2xl md:text-3xl font-display tracking-tight">
-          <span className="text-foreground">Suraj</span>
-          <span className="text-coral ml-2">Rajkumar</span>
-        </h2>
-        <p className="text-xs font-mono tracking-[0.2em] uppercase text-muted-foreground mt-2">
-          Designer & iOS Developer
-        </p>
-      </div>
 
       {/* Scroll indicator */}
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-muted-foreground">
