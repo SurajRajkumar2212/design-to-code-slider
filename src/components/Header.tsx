@@ -20,8 +20,8 @@ export const Header = () => {
       <div className="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between">
         <a href="#hero" className="group flex items-center gap-3">
           <span className="w-2 h-2 rounded-full bg-coral group-hover:scale-150 transition-transform" />
-          <span className="font-sans font-semibold text-sm tracking-wide">
-            SR
+          <span className="font-display text-base md:text-lg tracking-tight">
+            Suraj <span className="text-coral">Rajkumar</span>
           </span>
         </a>
         
