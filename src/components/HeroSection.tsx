@@ -110,6 +110,12 @@ export const HeroSection = () => {
         <div className="absolute top-0 bottom-0 left-1/2 -translate-x-1/2 w-px bg-gradient-to-b from-transparent via-foreground/20 to-transparent pointer-events-none" style={{ height: "100vh", top: "-50vh" }} />
       </div>
 
+      {/* Name - top left corner */}
+      <div className="absolute top-8 left-8 z-40">
+        <p className="text-xs font-mono tracking-[0.3em] uppercase text-muted-foreground">Portfolio of</p>
+        <h2 className="text-lg md:text-xl font-display text-foreground mt-1">Your Name</h2>
+      </div>
+
       {/* Scroll indicator */}
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-muted-foreground">
         <span className="text-xs font-mono tracking-widest uppercase">Scroll</span>
