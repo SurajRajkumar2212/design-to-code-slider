@@ -116,6 +116,9 @@ export const HeroSection = () => {
           <span className="text-foreground">Suraj</span>
           <span className="text-coral ml-2">Rajkumar</span>
         </h2>
+        <p className="text-xs font-mono tracking-[0.2em] uppercase text-muted-foreground mt-2">
+          Designer & iOS Developer
+        </p>
       </div>
 
       {/* Scroll indicator */}
